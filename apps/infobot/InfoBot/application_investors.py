@@ -1,5 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from asgiref.sync import sync_to_async
 from django.utils.translation import activate, gettext_lazy as _
 
@@ -8,7 +9,7 @@ from apps.infobot.InfoBot.states import InvestmentForm
 from apps.infobot.models import ApplicationInvestor, BotUser
 
 
-@dp.callback_query_handler(lambda message: message.text == _("Investitsiya uchun ariza berish"))
+@dp.callback_query_handler(lambda callback_query: callback_query.data == "apply_investment")
 async def process_apply_investment(callback_query: types.CallbackQuery):
     user = await sync_to_async(BotUser.objects.get)(telegram_id=callback_query.from_user.id)
     activate(user.language_code)
@@ -55,7 +56,8 @@ async def process_address(message: types.Message, state: FSMContext):
 async def process_message(message: types.Message, state: FSMContext):
     user = await sync_to_async(BotUser.objects.get)(telegram_id=message.from_user.id)
     activate(user.language_code)
-
+    keyboard = InlineKeyboardMarkup()
+    keyboard.add(InlineKeyboardButton(str(_("Orqaga")), callback_data="start"))
     async with state.proxy() as data:
         user_message = message.text
         await sync_to_async(ApplicationInvestor.objects.create)(
@@ -64,5 +66,5 @@ async def process_message(message: types.Message, state: FSMContext):
             address=data["address"],
             message=user_message,
         )
-    await message.reply(_("Arizangiz qabul qilindi!"))
+    await message.reply(_("Arizangiz qabul qilindi!"), reply_markup=keyboard)
     await state.finish()
