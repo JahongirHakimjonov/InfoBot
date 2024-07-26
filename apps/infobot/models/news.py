@@ -1,19 +1,18 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 from apps.shared.models import AbstractBaseModel
 
 
 class News(AbstractBaseModel):
     image = models.ImageField(
-        upload_to="services/", verbose_name=_("Image"), null=True, blank=True
+        upload_to="services/", null=True, blank=True
     )
-    title = models.CharField(max_length=255, verbose_name=_("Title"))
-    description = models.TextField(verbose_name=_("Description"))
+    title = models.CharField(max_length=255)
+    description = models.TextField()
 
     class Meta:
-        verbose_name = _("News")
-        verbose_name_plural = _("News")
+        verbose_name = "Yangilik"
+        verbose_name_plural = "Yangiliklar"
 
     def __str__(self):
         return self.title

@@ -8,180 +8,194 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-23 14:51+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-07-27 00:26+0500\n"
+"PO-Revision-Date: 2024-07-27 00:28+0500\n"
+"Last-Translator:   <jahongirhakimjonov@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
+#: apps/infobot/InfoBot/application_investors.py:11
+#: apps/infobot/InfoBot/handlers.py:173
+msgid "Investitsiya uchun ariza berish"
+msgstr "Заявка на инвестиции"
 
-msgid "Title"
-msgstr "Заголовок"
+#: apps/infobot/InfoBot/application_investors.py:17
+#: apps/infobot/InfoBot/application_partners.py:17
+msgid "Iltimos, to'liq ismingizni yuboring:"
+msgstr "Пожалуйста, пришлите свое полное имя:"
 
-msgid "Short Title"
-msgstr "Краткий заголовок"
+#: apps/infobot/InfoBot/application_investors.py:28
+#: apps/infobot/InfoBot/application_partners.py:28
+msgid "Iltimos, telefon raqamingizni yuboring:"
+msgstr ""
 
-msgid "Description"
-msgstr "Описание"
+#: apps/infobot/InfoBot/application_investors.py:39
+#: apps/infobot/InfoBot/application_partners.py:39
+msgid "Iltimos, manzilingizni yuboring:"
+msgstr ""
 
-msgid "Short Description"
-msgstr "Краткое описание"
+#: apps/infobot/InfoBot/application_investors.py:50
+#: apps/infobot/InfoBot/application_partners.py:50
+msgid "Iltimos, xabaringizni yuboring:"
+msgstr ""
 
-msgid "Image"
-msgstr "Изображение"
+#: apps/infobot/InfoBot/application_investors.py:67
+#: apps/infobot/InfoBot/application_partners.py:67
+msgid "Arizangiz qabul qilindi!"
+msgstr ""
 
-msgid "Academic Hours"
-msgstr "Академические часы"
+#: apps/infobot/InfoBot/application_partners.py:11
+#: apps/infobot/InfoBot/handlers.py:133
+msgid "Hamkorlik uchun ariza berish"
+msgstr ""
 
-msgid "Education Services"
-msgstr "Образовательные услуги"
+#: apps/infobot/InfoBot/handlers.py:45
+msgid "Iltimos, tilni tanlang:"
+msgstr ""
 
-msgid "Name"
-msgstr "Имя"
+#: apps/infobot/InfoBot/handlers.py:72
+msgid "Til tanlandi!"
+msgstr ""
 
-msgid "Education Subject Category"
-msgstr "Категория учебного предмета"
+#: apps/infobot/InfoBot/handlers.py:76 apps/infobot/InfoBot/handlers.py:88
+msgid "Boshlash"
+msgstr "Начинать"
 
-msgid "Education Subject Categories"
-msgstr "Категории учебных предметов"
+#: apps/infobot/InfoBot/handlers.py:77 apps/infobot/InfoBot/handlers.py:95
+#: apps/infobot/InfoBot/handlers.py:106
+msgid "Kompaniya haqida ma'lumot"
+msgstr ""
 
-msgid "Full Name"
-msgstr "Полное имя"
+#: apps/infobot/InfoBot/handlers.py:78 apps/infobot/InfoBot/handlers.py:96
+#: apps/infobot/InfoBot/handlers.py:206
+msgid "Xizmatlar"
+msgstr ""
 
-msgid "Email"
-msgstr "Электронная почта"
+#: apps/infobot/InfoBot/handlers.py:79 apps/infobot/InfoBot/handlers.py:97
+#: apps/infobot/InfoBot/handlers.py:231
+msgid "Yangiliklar"
+msgstr ""
 
-msgid "Phone"
-msgstr "Телефон"
+#: apps/infobot/InfoBot/handlers.py:80 apps/infobot/InfoBot/handlers.py:98
+#: apps/infobot/InfoBot/handlers.py:256
+msgid "Kontaktlar"
+msgstr ""
 
-msgid "Problem"
-msgstr "Проблема"
+#: apps/infobot/InfoBot/handlers.py:81 apps/infobot/InfoBot/handlers.py:99
+#: apps/infobot/InfoBot/handlers.py:272
+msgid "FAQ"
+msgstr ""
 
-msgid "Category"
-msgstr "Категория"
+#: apps/infobot/InfoBot/handlers.py:82 apps/infobot/InfoBot/handlers.py:100
+#: apps/infobot/InfoBot/handlers.py:126
+msgid "Hamkorlar"
+msgstr ""
 
-msgid "Video"
-msgstr "Видео"
+#: apps/infobot/InfoBot/handlers.py:83 apps/infobot/InfoBot/handlers.py:101
+#: apps/infobot/InfoBot/handlers.py:166
+msgid "Investorlar"
+msgstr ""
 
-msgid "File"
-msgstr "Файл"
+#: apps/infobot/InfoBot/handlers.py:85 apps/infobot/InfoBot/handlers.py:103
+msgid "Xush kelibsiz! Tanlovni bajaring:"
+msgstr ""
 
-msgid "Education Subject"
-msgstr "Учебный предмет"
+#: apps/infobot/InfoBot/handlers.py:113
+msgid ""
+"Kompaniya haqida ma'lumot:\n"
+"\n"
+msgstr ""
 
-msgid "Education Subjects"
-msgstr "Учебные предметы"
+#: apps/infobot/InfoBot/handlers.py:132 apps/infobot/InfoBot/handlers.py:138
+msgid "Hamkorlarni ko'rish"
+msgstr ""
 
-msgid "Logo"
-msgstr "Логотип"
+#: apps/infobot/InfoBot/handlers.py:134 apps/infobot/InfoBot/handlers.py:174
+msgid "Orqaga"
+msgstr ""
 
-msgid "Address"
-msgstr "Адрес"
+#: apps/infobot/InfoBot/handlers.py:135
+msgid "Hamkorlar:"
+msgstr ""
 
-msgid "Dekan"
-msgstr "Декан"
+#: apps/infobot/InfoBot/handlers.py:145
+msgid ""
+"Hamkorlar:\n"
+"\n"
+msgstr ""
 
-msgid "Dekan Photo"
-msgstr "Фото декана"
+#: apps/infobot/InfoBot/handlers.py:159 apps/infobot/InfoBot/handlers.py:200
+#: apps/infobot/InfoBot/handlers.py:226
+msgid "Logo URL noto'g'ri.\n"
+msgstr ""
 
-msgid "Faculty"
-msgstr "Факультет"
+#: apps/infobot/InfoBot/handlers.py:172 apps/infobot/InfoBot/handlers.py:178
+msgid "Investorlarni ko'rish"
+msgstr ""
 
-msgid "Faculties"
-msgstr "Факультеты"
+#: apps/infobot/InfoBot/handlers.py:175
+msgid "Investorlar:"
+msgstr ""
 
-msgid "Files"
-msgstr "Файлы"
+#: apps/infobot/InfoBot/handlers.py:185
+msgid ""
+"Investorlar:\n"
+"\n"
+msgstr ""
 
-msgid "Gallery"
-msgstr "Галерея"
+#: apps/infobot/InfoBot/handlers.py:251
+msgid "Rasm URL noto'g'ri.\n"
+msgstr ""
 
-msgid "Subtitle"
-msgstr "Подзаголовок"
+#: apps/infobot/InfoBot/handlers.py:263
+msgid ""
+"Kontaktlar:\n"
+"\n"
+msgstr ""
 
-msgid "Location"
-msgstr "Местоположение"
+#: apps/infobot/InfoBot/handlers.py:279
+msgid ""
+"FAQ:\n"
+"\n"
+msgstr ""
 
-msgid "Icon"
-msgstr "Иконка"
+#: apps/infobot/admin/botusers.py:60
+msgid "Faol qilish"
+msgstr ""
 
-msgid "Instagram"
-msgstr "Инстаграм"
+#: apps/infobot/admin/botusers.py:66
+msgid "Nofaol qilish"
+msgstr ""
 
-msgid "Facebook"
-msgstr "Фейсбук"
+#: apps/infobot/choices/status.py:6
+msgid "Pending"
+msgstr ""
 
-msgid "Twitter"
-msgstr "Твиттер"
+#: apps/infobot/choices/status.py:7
+msgid "Approved"
+msgstr ""
 
-msgid "Linkedin"
-msgstr "Линкедин"
+#: apps/infobot/choices/status.py:8
+msgid "Rejected"
+msgstr ""
 
-msgid "Youtube"
-msgstr "Ютуб"
+#: apps/infobot/choices/status.py:9
+msgid "Cancelled"
+msgstr ""
 
-msgid "Telegram"
-msgstr "Телеграм"
-
-msgid "Home"
-msgstr "Главная"
-
-msgid "News"
-msgstr "Новости"
-
-msgid "Projects"
-msgstr "Проекты"
-
-msgid "PTIK Story"
-msgstr "История PTIK"
-
-msgid "PTIK Stories"
-msgstr "Истории PTIK"
-
-msgid "Scientific Base"
-msgstr "Научная база"
-
-msgid "Subject"
-msgstr "Тема"
-
-msgid "Message"
-msgstr "Сообщение"
-
-msgid "Videos"
-msgstr "Видео"
-
-msgid "email address"
-msgstr "Адрес электронной почты"
-
-msgid "The groups this user belongs to. A user will get all permissions granted to each of their groups."
-msgstr "Группы, к которым принадлежит этот пользователь. Пользователь получит все разрешения, предоставленные каждой из их групп."
-
-msgid "groups"
-msgstr "группы"
-
-msgid "Specific permissions for this user."
-msgstr "Специальные разрешения для этого пользователя."
-
-msgid "user permissions"
-msgstr "разрешения пользователя"
-
-msgid "user"
-msgstr "пользователь"
-
-msgid "users"
-msgstr "пользователи"
-
+#: core/settings.py:101
 msgid "Russia"
-msgstr "Россия"
+msgstr ""
 
+#: core/settings.py:102
 msgid "English"
-msgstr "Английский"
+msgstr ""
 
+#: core/settings.py:103
 msgid "Uzbek"
-msgstr "Узбекский"
+msgstr ""

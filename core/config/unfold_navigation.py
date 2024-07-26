@@ -1,90 +1,89 @@
 from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy as _
 
 PAGES = [
     {
         "seperator": True,
         "items": [
             {
-                "title": _("Home page"),
+                "title": "Home page",
                 "icon": "home",
                 "link": reverse_lazy("admin:index"),
             }
         ],
     },
     {
-        "title": _("Users"),
+        "title": "Users",
         "seperator": True,
         "items": [
             {
-                "title": _("Foydalanuvchilar"),
+                "title": "Foydalanuvchilar",
                 "icon": "person",
                 "link": reverse_lazy("admin:auth_user_changelist"),
             },
             {
-                "title": _("Guruhlar"),
+                "title": "Guruhlar",
                 "icon": "supervisor_account",
                 "link": reverse_lazy("admin:auth_group_changelist"),
             },
             {
-                "title": _("Bot foydalanuvchilari"),
+                "title": "Bot foydalanuvchilari",
                 "icon": "android",
                 "link": reverse_lazy("admin:infobot_botuser_changelist"),
             },
         ],
     },
     {
-        "title": _("Murojaatlar"),
+        "title": "Murojaatlar",
         "seperator": True,
         "items": [
             {
-                "title": _("Investorlik murojaatlari"),
+                "title": "Investorlik murojaatlari",
                 "icon": "account_balance",
                 "link": reverse_lazy("admin:infobot_applicationinvestor_changelist"),
             },
             {
-                "title": _("Partnyorlik murojaatlari"),
+                "title": "Partnyorlik murojaatlari",
                 "icon": "handshake",
                 "link": reverse_lazy("admin:infobot_applicationpartner_changelist"),
             },
         ],
     },
     {
-        "title": _("Ma'lumotlar"),
+        "title": "Ma'lumotlar",
         "seperator": True,
         "items": [
             {
-                "title": _("Kompaniya ma'lumotlari"),
+                "title": "Kompaniya ma'lumotlari",
                 "icon": "business",
                 "link": reverse_lazy("admin:infobot_companyinfo_changelist"),
             },
             {
-                "title": _("Kontakt ma'lumotlar"),
+                "title": "Kontakt ma'lumotlar",
                 "icon": "contact_support",
                 "link": reverse_lazy("admin:infobot_contact_changelist"),
             },
             {
-                "title": _("FAQ"),
+                "title": "FAQ",
                 "icon": "help_outline",
                 "link": reverse_lazy("admin:infobot_faq_changelist"),
             },
             {
-                "title": _("Invertorlar"),
+                "title": "Invertorlar",
                 "icon": "trending_up",
                 "link": reverse_lazy("admin:infobot_investor_changelist"),
             },
             {
-                "title": _("Yangiliklar"),
+                "title": "Yangiliklar",
                 "icon": "article",
                 "link": reverse_lazy("admin:infobot_news_changelist"),
             },
             {
-                "title": _("Partnyorlar"),
+                "title": "Partnyorlar",
                 "icon": "handshake",
                 "link": reverse_lazy("admin:infobot_partner_changelist"),
             },
             {
-                "title": _("Servislar"),
+                "title": "Servislar",
                 "icon": "build",
                 "link": reverse_lazy("admin:infobot_service_changelist"),
             },

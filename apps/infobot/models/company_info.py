@@ -1,20 +1,19 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 from apps.shared.models import AbstractBaseModel
 
 
 class CompanyInfo(AbstractBaseModel):
-    name = models.CharField(max_length=200, verbose_name=_("Company Name"))
-    address = models.CharField(max_length=200, verbose_name=_("Address"))
-    phone = models.CharField(max_length=200, verbose_name=_("Phone"))
-    email = models.EmailField(verbose_name=_("Email"))
-    website = models.URLField(verbose_name=_("Website"))
-    description = models.TextField(verbose_name=_("Description"))
+    name = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
+    phone = models.CharField(max_length=200)
+    email = models.EmailField()
+    website = models.URLField()
+    description = models.TextField()
 
     class Meta:
-        verbose_name = _("Company Info")
-        verbose_name_plural = _("Company Info")
+        verbose_name = "Kompaniya ma'lumoti"
+        verbose_name_plural = "Kompaniya ma'lumotlari"
 
     def __str__(self):
         return self.name

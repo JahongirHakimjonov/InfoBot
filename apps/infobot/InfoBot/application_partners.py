@@ -1,45 +1,61 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from asgiref.sync import sync_to_async
+from django.utils.translation import activate, gettext_lazy as _
 
 from apps.infobot.InfoBot.handlers import bot, dp
 from apps.infobot.InfoBot.states import PartnershipForm
-from apps.infobot.models import ApplicationPartner
+from apps.infobot.models import ApplicationPartner, BotUser
 
 
-@dp.callback_query_handler(lambda c: c.data == "apply_partnership")
+@dp.callback_query_handler(lambda message: message.text == _("Hamkorlik uchun ariza berish"))
 async def process_apply_partnership(callback_query: types.CallbackQuery):
+    user = await sync_to_async(BotUser.objects.get)(telegram_id=callback_query.from_user.id)
+    activate(user.language_code)
+
     await bot.answer_callback_query(callback_query.id)
-    await bot.send_message(callback_query.from_user.id, "Please send your full name:")
+    await bot.send_message(callback_query.from_user.id, _("Iltimos, to'liq ismingizni yuboring:"))
     await PartnershipForm.full_name.set()
 
 
 @dp.message_handler(state=PartnershipForm.full_name)
 async def process_full_name(message: types.Message, state: FSMContext):
+    user = await sync_to_async(BotUser.objects.get)(telegram_id=message.from_user.id)
+    activate(user.language_code)
+
     async with state.proxy() as data:
         data["full_name"] = message.text
-    await message.reply("Please send your phone number:")
+    await message.reply(_("Iltimos, telefon raqamingizni yuboring:"))
     await PartnershipForm.next()
 
 
 @dp.message_handler(state=PartnershipForm.phone)
 async def process_phone(message: types.Message, state: FSMContext):
+    user = await sync_to_async(BotUser.objects.get)(telegram_id=message.from_user.id)
+    activate(user.language_code)
+
     async with state.proxy() as data:
         data["phone"] = message.text
-    await message.reply("Please send your address:")
+    await message.reply(_("Iltimos, manzilingizni yuboring:"))
     await PartnershipForm.next()
 
 
 @dp.message_handler(state=PartnershipForm.address)
 async def process_address(message: types.Message, state: FSMContext):
+    user = await sync_to_async(BotUser.objects.get)(telegram_id=message.from_user.id)
+    activate(user.language_code)
+
     async with state.proxy() as data:
         data["address"] = message.text
-    await message.reply("Please send your message:")
+    await message.reply(_("Iltimos, xabaringizni yuboring:"))
     await PartnershipForm.next()
 
 
 @dp.message_handler(state=PartnershipForm.user_message)
 async def process_message(message: types.Message, state: FSMContext):
+    user = await sync_to_async(BotUser.objects.get)(telegram_id=message.from_user.id)
+    activate(user.language_code)
+
     async with state.proxy() as data:
         user_message = message.text
         await sync_to_async(ApplicationPartner.objects.create)(
@@ -48,5 +64,9 @@ async def process_message(message: types.Message, state: FSMContext):
             address=data["address"],
             message=user_message,
         )
-    await message.reply("Your application has been submitted!")
+    await message.reply(_("Arizangiz qabul qilindi!"))
     await state.finish()
+
+############################################################################################################
+# RUSSIAN
+############################################################################################################
